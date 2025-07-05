@@ -23,6 +23,15 @@ conda activate infinigen
 pip install -r requirements.txt
 ```
 
+```sh
+git clone https://github.com/snu-comparch/infinigen
+uv venv --python 3.9
+uv pip install -r requirements.txt
+source .venv/bin/activate
+cd speedup
+sh ./install.sh
+```
+
 ## Run Experiments
 
 We provide the scripts for accuracy and speedup evaluation.
