@@ -30,6 +30,10 @@ uv pip install -r requirements.txt
 source .venv/bin/activate
 cd speedup
 sh ./install.sh
+cd /data/llm
+modelscope download --model facebook/opt-6.7b --local_dir ./opt-6.7b --exclude="*.msgpack,*.h5"
+cd -
+python scripts/convert_model_weights.py opt-6.7b /data/llm/opt-6.7b /data/llm
 ```
 
 ## Run Experiments
